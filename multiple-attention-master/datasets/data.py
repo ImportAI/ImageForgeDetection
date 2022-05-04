@@ -35,7 +35,7 @@ def FF_dataset(tag='Origin',codec='c0',part='train'):
             files.append([path+i[1]+'_'+i[0],1])
     return files
 
-Celeb_test=list(map(lambda x:[os.path.join(celebroot,x[0]),1-x[1]],load_json(celebroot+'celeb.json')))
+# Celeb_test=list(map(lambda x:[os.path.join(celebroot,x[0]),1-x[1]],load_json(celebroot+'celeb.json')))
 
 def make_balance(data):
     tr=list(filter(lambda x:x[1]==0,data))

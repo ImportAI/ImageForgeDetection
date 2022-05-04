@@ -31,7 +31,7 @@ class DeepfakeDataset(Dataset):
         resize_=(int(resize[0]/0.8),int(resize[1]/0.8))
         self.resize=resize
         #Resize(*resize_,interpolation=cv2.INTER_CUBIC),
-        self.trans=Compose([CenterCrop(*resize),ToTensor(normalize=normalize)])
+        self.trans=Compose([CenterCrop(*resize),ToTensor( )])
         ###############
         # doing resize and center crop in trans
         if type(datalabel)!=str:
